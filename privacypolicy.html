@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trapbox | Privacy Policy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050507;
+      --card: rgba(255, 255, 255, 0.04);
+      --stroke: rgba(255, 0, 0, 0.12);
+      --text: #f2f2f2;
+      --muted: #b0b0b0;
+      --accent: #ff2a2a;
+      --accentGlow: rgba(255, 42, 42, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top, rgba(255, 0, 0, 0.08), transparent 40%),
+        radial-gradient(circle at bottom, rgba(255, 0, 0, 0.05), transparent 50%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--stroke);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .brand img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .banner {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      filter: brightness(0.55) contrast(1.1);
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-top: 22px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(12px);
+      transition: 0.25s ease;
+    }
+
+    section:hover {
+      transform: translateY(-2px);
+      border-color: var(--accentGlow);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-size: 14px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    ::selection {
+      background: rgba(255, 0, 0, 0.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="brand">
+      <img src="https://spectrion.github.io/assets/IMG_4108.png">
+      <span>Trapbox</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Docs</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <img class="banner" src="https://spectrion.github.io/assets/IMG_4109.png">
+    <h1>Privacy Policy</h1>
+    <div class="subtitle">How Trapbox processes and protects security data</div>
+  </div>
+
+  <div class="container">
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Trapbox is a Discord security system designed to detect, prevent, and respond to raids, abuse, and malicious activity using automated threat intelligence and cross-server protection.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data We Collect</h2>
+      <ul>
+        <li>Discord User IDs</li>
+        <li>Discord Server IDs</li>
+        <li>Moderation actions (ban/unban logs)</li>
+        <li>Incident reports submitted by servers</li>
+        <li>Honeypot interaction events (if triggered)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How We Use Data</h2>
+      <ul>
+        <li>Detect and prevent raids or malicious activity</li>
+        <li>Maintain a shared threat intelligence network</li>
+        <li>Automate moderation actions across connected servers</li>
+        <li>Improve system accuracy and security protection</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Security Network & Logging</h2>
+      <p>
+        By using Trapbox or participating in servers that use Trapbox, you acknowledge that certain security-related data (including Discord User IDs, Server IDs, and moderation events) may be logged as part of a shared protection system.
+      </p>
+      <p>
+        This information contributes to a cross-server security intelligence network used to detect and prevent raids, abuse, and coordinated attacks.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Retention</h2>
+      <p>
+        Trapbox may store data temporarily or long-term depending on its relevance to security and moderation purposes. Data may be periodically reviewed and removed when no longer required for threat prevention or system integrity.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Sharing</h2>
+      <ul>
+        <li>No sale of user data</li>
+        <li>Shared only between Trapbox-enabled servers</li>
+        <li>May be disclosed if required by law</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Security</h2>
+      <p>
+        We use reasonable safeguards to protect stored data, but no system is completely secure.
+      </p>
+    </section>
+
+    <section>
+      <h2>User Rights</h2>
+      <p>
+        Depending on your region, you may request review or correction of stored data through server administrators or the Trapbox system dashboard.
+      </p>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>
+        Trapbox may rely on Discord and infrastructure providers. Each service has its own privacy policy.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes</h2>
+      <p>
+        This Privacy Policy may be updated over time. Continued use of Trapbox indicates acceptance of changes.
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © Trapbox — Security Infrastructure for Discord Communities
+  </footer>
+
+</body>
+</html>
