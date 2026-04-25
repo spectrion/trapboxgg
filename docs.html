@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trapbox | Docs</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050507;
+      --card: rgba(255, 255, 255, 0.04);
+      --stroke: rgba(255, 0, 0, 0.12);
+      --text: #f2f2f2;
+      --muted: #b0b0b0;
+      --accent: #ff2a2a;
+      --accentGlow: rgba(255, 42, 42, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top, rgba(255, 0, 0, 0.08), transparent 40%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--stroke);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .brand img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .layout {
+      display: flex;
+      flex: 1;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 240px;
+      padding: 20px;
+      border-right: 1px solid var(--stroke);
+      background: rgba(0,0,0,0.2);
+    }
+
+    .sidebar h3 {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 6px;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 42, 42, 0.08);
+      color: var(--text);
+    }
+
+    .sidebar a.active {
+      background: rgba(255, 42, 42, 0.15);
+      color: var(--accent);
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      padding: 40px;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 30px;
+      font-size: 13px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(10px);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      border-color: var(--accentGlow);
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      font-size: 15px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid var(--stroke);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="brand">
+      <img src="https://spectrion.github.io/assets/IMG_4108.png">
+      <span>Trapbox Docs</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Docs</a>
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Support</a>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <div class="sidebar">
+      <h3>Getting Started</h3>
+      <a class="active" href="#">Overview</a>
+      <a href="#">Setup</a>
+      <a href="#">Dashboard</a>
+
+      <h3>Security</h3>
+      <a href="#">Anti-Raid System</a>
+      <a href="#">Honeypot System</a>
+      <a href="#">Threat Database</a>
+
+      <h3>API</h3>
+      <a href="#">Webhooks</a>
+      <a href="#">Events</a>
+    </div>
+
+    <div class="content">
+
+      <h1>Documentation</h1>
+      <div class="subtitle">Everything you need to understand and use Trapbox</div>
+
+      <div class="card">
+        <h2>Overview</h2>
+        <p>
+          Trapbox is a Discord security system designed to detect raids, prevent abuse,
+          and coordinate cross-server protection using automated threat intelligence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>How It Works</h2>
+        <ul>
+          <li>Monitors server activity for raid behavior</li>
+          <li>Detects malicious users via shared database</li>
+          <li>Automatically enforces bans or restrictions</li>
+          <li>Uses honeypot channels for early detection</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Dashboard System</h2>
+        <p>
+          Server administrators can review incidents, approve actions, and manage unban requests
+          through the Trapbox dashboard system.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Security Model</h2>
+        <p>
+          Trapbox operates as a distributed security network where verified threat data is shared
+          across all participating servers to prevent repeat attacks.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    © Trapbox — Documentation System
+  </footer>
+
+</body>
+</html>
