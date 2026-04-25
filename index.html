@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trapbox | Security Infrastructure for Discord</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050507;
+      --card: rgba(255, 255, 255, 0.04);
+      --stroke: rgba(255, 0, 0, 0.12);
+      --text: #f2f2f2;
+      --muted: #b0b0b0;
+      --accent: #ff2a2a;
+      --accentGlow: rgba(255, 42, 42, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top, rgba(255, 0, 0, 0.10), transparent 45%),
+        radial-gradient(circle at bottom, rgba(255, 0, 0, 0.06), transparent 55%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--stroke);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .brand img {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      margin-left: 16px;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 0 20px var(--accentGlow);
+    }
+
+    .primary:hover {
+      transform: translateY(-2px);
+      background: #ff3d3d;
+    }
+
+    .secondary {
+      border: 1px solid var(--stroke);
+      color: var(--text);
+      background: transparent;
+    }
+
+    .secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .grid {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 42, 42, 0.35);
+    }
+
+    .card h3 {
+      font-size: 15px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      color: #666;
+      border-top: 1px solid var(--stroke);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="brand">
+      <img src="https://spectrion.github.io/assets/IMG_4108.png">
+      <span>Trapbox</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="/docs.html">Docs</a>
+      <a href="/tos.html">Terms</a>
+      <a href="/privacypolicy.html">Privacy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Discord Security, Reinvented</h1>
+    <p>
+      Trapbox is a cross-server security system that detects raids, blocks malicious users,
+      and protects communities using real-time threat intelligence and automated enforcement.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="/docs.html">View Docs</a>
+      <a class="btn secondary" href="/support.html">Get Support</a>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Anti-Raid System</h3>
+      <p>Detects coordinated attacks and automatically responds before damage spreads.</p>
+    </div>
+
+    <div class="card">
+      <h3>Threat Intelligence</h3>
+      <p>Shared database of malicious users across all Trapbox-enabled servers.</p>
+    </div>
+
+    <div class="card">
+      <h3>Honeypot Detection</h3>
+      <p>Fake channels identify bad actors instantly before they can strike.</p>
+    </div>
+
+    <div class="card">
+      <h3>Automated Enforcement</h3>
+      <p>Cross-server bans and moderation actions based on verified threat data.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © Trapbox — Security Infrastructure for Discord Communities
+  </footer>
+
+</body>
+</html>
